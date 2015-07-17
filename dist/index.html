@@ -5,10 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="app.css">
-    <title>3.3-clock</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Etsy</title>
 </head>
-<body>
+<body >
+<div id="border">
+  <div id="imgStyle">
+    <div id="heart">
+    <i class="fa fa-heart"></i>
+    </div>
+    <div id="menu">
+    <i class="fa fa-navicon"></i>
+    <i class="fa fa-sort-desc"></i>
+    </div>
+    <img  src="images/whiskey.jpg" alt="whiskey"/>
+    <div id= "price">$29.99 USD</div>
+    <div id= "desc">This is description</div>
+    <div id="key"><b>Keyword</b></div>
+  </div>
 
+ </div>
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="load-etsy.js"></script>
 <script src="app.js"></script>
+<!-- livereload snippet -->
+<script>document.write('<script src="http://'
+ + (location.host || 'localhost').split(':')[0]
+ + ':35729/livereload.js?snipver=1"><\/script>')
+</script>
 </body>
 </html>
