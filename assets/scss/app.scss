@@ -12,5 +12,52 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body{
+	background-color: #ccc;
+}
+#imgStyle{
+  position: absolute;
+  top: 175px;
+  left: 600px;
+  width: 450px;
+  height: 300px;
+};
+#price{
+	position: absolute;
+	z-index: 10;
+	bottom: -90px;
+	right: -90px;
+	color: #56DB0F;
 
-// Your SASS Journey Starts Here
+};
+#border{
+	border-color: #FF0000;
+
+};
+#heart{
+	position:absolute;
+	right:-75px;
+	top:-20px;
+};
+#menu{
+	position: absolute;
+	right:-110px;
+	top:-20px;
+};
+#desc{
+	position: absolute;
+	top:365px;
+	left:40px;
+};
+#key{
+	position: absolute;
+	top:385px;
+	left:40px;
+	color:grey;
+};
+
+
+
+
+//}//
+
