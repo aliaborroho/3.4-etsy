@@ -1,6 +1,6 @@
 var loadEtsy = function (query, onload, immediate) {
     var oReq = new XMLHttpRequest();
-    var apiKey = 'etsy';
+    var apiKey = 'ki0carhy6hn0ldkouxbju1wq';
     var url = 'https://api.etsy.com/v2/listings/active.js?api_key=' +
         apiKey +
         '&keywords=' +
@@ -13,8 +13,8 @@ var loadEtsy = function (query, onload, immediate) {
         dataType: 'jsonp',
         success: onload
     });
-if (immediate) {
-    immediate();
 
-}
+    if (immediate) {
+        immediate();
+    }
 };

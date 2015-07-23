@@ -1,5 +1,5 @@
 @import 'reset';
-$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 
 @import 'font-awesome';
 @import 'bourbon';
@@ -12,52 +12,184 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+$border-color: #BFBD88;
+$border-hover:#5A5552;
+$background-color:#F5F5F1;
+$etsy-orange:#f45800;
+$etsy-blue:#3E7DE4;
+
 body{
-	background-color: #ccc;
+	background-color:#F5F5F1;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+ 	}
+ .header{
+ 	position: relative;
+ 	padding: 0;
+ 	background-color: #FFFFFF;
+ 	border-bottom: 0 solid rgba(0, 0, 0, 0);
+ 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+ }
+ .header-inner{
+ 	height: 80px;
+ 	max-width: 980px;
+ 	margin: 0 148px;
+ 	text-align: left;
+ }
+ .logo a{
+ 	display: block;
+ 	width: 100%;
+ 	height: 100%;
+ 	background: url(https://www.etsy.com/assets/dist/images/etsylogo.20150626221852.png);
+ 	background-size: 100%;
+ 	margin-top: 2px;
+ 	text-indent: -10000em;
+ 	overflow: hidden;
+ 	color: #F45800;
+ 	margin-top: 2px;
+ }
+ img{
+ 	width: 100%
+ }
+ .main-body {
+ 	@include outer-container(980px);
+ 	position:relative;
+ 	top: 2.5em;
+ 	.show-results{
+ 		margin-bottom: .75em;
+ 		font-weight: bold;
+ 	}
+ 	li > a{
+ 		text-decoration: none;
+ 	}
+ 	.top-panel {
+ 		 border-radius: 3px;
+         background-color: #FFF;
+         border: 1px solid #E1E3DF;
+         border-bottom-color: #CBCCC9;
+         margin: 0 0 12px;
+         padding: 12px;
+ 	}
+ 	.cat-box {
+ 		background-color: FFFFFF
+ 	}
+ 	.categories-first {
+ 		color: black
+ 	}
+ 	.categories-rest{
+ 		padding: 7px;
+ 		color: #1D7FA9;
+ 	}
+ 	.refine-search {
+ 		border-radius:3px;
+ 		background-color: #FFF;
+ 		border-bottom-color: #CBCCC9;
+ 		padding: 5px;
+ 	}
+ 	.listings {
+ 		@include span-columns(9);
+ 		@include omega();
+ 	}
+ 	.article-body{
+ 		width: 100%;
+         @include span-columns(4);
+         @include omega(3n);
+         margin-bottom: 2em;
+         text-decoration: none;
+         border-radius: 3px;
+         background-color: #FFF;
+         border: 1px solid #E1E3DF;
+         border-bottom-color: #CBCCC9;
+         font-size: 12px;
+    }
+    .article-body > a {
+    	text-decoration: underline;
+    	color: #b2b2b2;
+    }
+    .etsy-title {
+    	text-overflow: ellipsis;
+    	white-space: nowrap;
+    	overflow: hidden;
+    	padding: 5px;
+ 	}
+ 	.shop {
+ 		padding: 5px;
+ 		color: #b2b2b2;
+ 	.price
+ 		padding 5px;
+ 		float:right;
+ 		color: #78c042;
+ 	}
 }
-#imgStyle{
-  position: absolute;
-  top: 175px;
-  left: 600px;
-  width: 450px;
-  height: 300px;
-};
-#price{
-	position: absolute;
-	z-index: 10;
-	bottom: -90px;
-	right: -90px;
-	color: #56DB0F;
 
-};
-#border{
-	border-color: #FF0000;
-
-};
-#heart{
-	position:absolute;
-	right:-75px;
-	top:-20px;
-};
-#menu{
-	position: absolute;
-	right:-110px;
-	top:-20px;
-};
-#desc{
-	position: absolute;
-	top:365px;
-	left:40px;
-};
-#key{
-	position: absolute;
-	top:385px;
-	left:40px;
-	color:grey;
-};
+.email-footer {
+ 	border: #EBEBE7 solid .50em;
+ 	margin: auto;
+ 	margin-top: 3em;
+ 	text-align: center;
+ 	width: 980px;
+ 	height: 150px;
+ 	padding: 20px;
+ 	font-family: "Guardian-EgypTT",Georgia,serif;
+ 	font-size: 18px;
+ }
+ lower-nav-footer {
+ 	@include outer-container(980px);
+ 	.column-one{
+ 		@include span-columns(2);
+ 		@include shift(1);
+ 	}
+ 	.column-two{
+ 		@include span-columns(2);
+ 	}
+ 	.column-three {
+ 		@include span-columns(2);
+ 	}
+ 	.column-four {
+ 		@include span-columns(2);
+ 	}
+ 	.column-five{
+ 		@include span-columns(2);
+ 	}
+}
 
 
 
 
-//}//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
