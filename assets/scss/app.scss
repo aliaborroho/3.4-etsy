@@ -1,5 +1,5 @@
 @import 'reset';
-$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 
 @import 'font-awesome';
 @import 'bourbon';
@@ -12,184 +12,571 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-$border-color: #BFBD88;
-$border-hover:#5A5552;
-$background-color:#F5F5F1;
-$etsy-orange:#f45800;
-$etsy-blue:#3E7DE4;
+$border-color: #BFBDBB;
+$border-hover: #5A5552;
+$background-color: #F5F5F1;
+$etsy-orange: #f45800;
+$etsy-blue: #0192B5;
+$etsy-blue-hover: #F0FBFD;
 
-body{
-	background-color:#F5F5F1;
-	font-family: arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.4;
- 	}
- .header{
- 	position: relative;
- 	padding: 0;
- 	background-color: #FFFFFF;
- 	border-bottom: 0 solid rgba(0, 0, 0, 0);
- 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
- }
- .header-inner{
- 	height: 80px;
- 	max-width: 980px;
- 	margin: 0 148px;
- 	text-align: left;
- }
- .logo a{
- 	display: block;
- 	width: 100%;
- 	height: 100%;
- 	background: url(https://www.etsy.com/assets/dist/images/etsylogo.20150626221852.png);
- 	background-size: 100%;
- 	margin-top: 2px;
- 	text-indent: -10000em;
- 	overflow: hidden;
- 	color: #F45800;
- 	margin-top: 2px;
- }
- img{
- 	width: 100%
- }
- .main-body {
- 	@include outer-container(980px);
- 	position:relative;
- 	top: 2.5em;
- 	.show-results{
- 		margin-bottom: .75em;
- 		font-weight: bold;
- 	}
- 	li > a{
- 		text-decoration: none;
- 	}
- 	.top-panel {
- 		 border-radius: 3px;
-         background-color: #FFF;
-         border: 1px solid #E1E3DF;
-         border-bottom-color: #CBCCC9;
-         margin: 0 0 12px;
-         padding: 12px;
- 	}
- 	.cat-box {
- 		background-color: FFFFFF
- 	}
- 	.categories-first {
- 		color: black
- 	}
- 	.categories-rest{
- 		padding: 7px;
- 		color: #1D7FA9;
- 	}
- 	.refine-search {
- 		border-radius:3px;
- 		background-color: #FFF;
- 		border-bottom-color: #CBCCC9;
- 		padding: 5px;
- 	}
- 	.listings {
- 		@include span-columns(9);
- 		@include omega();
- 	}
- 	.article-body{
- 		width: 100%;
-         @include span-columns(4);
-         @include omega(3n);
-         margin-bottom: 2em;
-         text-decoration: none;
-         border-radius: 3px;
-         background-color: #FFF;
-         border: 1px solid #E1E3DF;
-         border-bottom-color: #CBCCC9;
-         font-size: 12px;
-    }
-    .article-body > a {
-    	text-decoration: underline;
-    	color: #b2b2b2;
-    }
-    .etsy-title {
-    	text-overflow: ellipsis;
-    	white-space: nowrap;
-    	overflow: hidden;
-    	padding: 5px;
- 	}
- 	.shop {
- 		padding: 5px;
- 		color: #b2b2b2;
- 	.price
- 		padding 5px;
- 		float:right;
- 		color: #78c042;
- 	}
+$body-fonts: HelveticaNeue, Helvetica, sans-serif;
+
+body {
+    background: $background-color;
 }
 
-.email-footer {
- 	border: #EBEBE7 solid .50em;
- 	margin: auto;
- 	margin-top: 3em;
- 	text-align: center;
- 	width: 980px;
- 	height: 150px;
- 	padding: 20px;
- 	font-family: "Guardian-EgypTT",Georgia,serif;
- 	font-size: 18px;
- }
- lower-nav-footer {
- 	@include outer-container(980px);
- 	.column-one{
- 		@include span-columns(2);
- 		@include shift(1);
- 	}
- 	.column-two{
- 		@include span-columns(2);
- 	}
- 	.column-three {
- 		@include span-columns(2);
- 	}
- 	.column-four {
- 		@include span-columns(2);
- 	}
- 	.column-five{
- 		@include span-columns(2);
- 	}
+.outter-container {
+    @include outer-container(980px);
+    margin: auto;
 }
+.sidebar {
+    @include span-columns(3);
+    font-family: $body-fonts;
+}
+.content {
+    @include span-columns(9);
+    @include omega();
+    margin-bottom: 20px;
+}
+nav {
+    position: relative;
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid $border-color;
+    box-shadow: 0px 3px 8px -7px $border-hover;
+    font-family: $body-fonts;
+    padding: 0 5%;
+    margin-bottom: 20px;
 
+    .outer-container {
+        width: 100%;
+        padding: 20px 0;
+    }
+    h1 {
+        float: left;
+        color: $etsy-orange;
+        font-family: serif;
+        font-size: 2.5em;
+        margin-right: 1rem;
+    }
+    a {
+        vertical-align: middle;
+        padding: 10px;
+        color: $etsy-blue;
+        border-radius: 3px;
+        text-decoration: none;
 
+    }
+    a:nth-of-type(1) {
+        color: $border-hover;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        float: left;
 
+        span:after {
+            float: right;
+            position: relative;
+            top: 6px;
+            right: -5px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 4px 0 4px;
+            border-color: $border-color transparent transparent transparent;
+        }
+    }
+    a:nth-of-type(1):hover {
+        border-color: $border-hover;
+    }
+    .search {
+        float: left;
+        margin-right: 1rem;
 
+        input {
+            margin: 0;
+            background: $background-color;
+            padding: 10px;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+        input:hover {
+            border-color: $border-hover;
+        }
+        input:focus {
+            border-color: $etsy-blue;
+            background: white;
+            outline: none;
+        }
+        button {
+            background: $etsy-blue;
+            color: white;
+            font-weight: bold;
+            border: 1px solid darken($etsy-blue, 5%);
+            margin: 0;
+            margin-left: -7px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        button:hover {
+            background: lighten($etsy-blue, 2%)
+        }
+        button:focus {
+            outline: none;
+        }
+    }
+    .account {
+        float: right;
+        a {
+            float: left;
+            color: $etsy-blue;
+            border: none;
+        }
+        a:nth-of-type(2) {
+            margin-left: 1rem;
+            border-radius: 3px;
+            border: 1px solid $etsy-blue;
+        }
+        a:nth-of-type(2):hover {
+            background: $etsy-blue-hover;
+        }
+        a:last-of-type {
+            margin-left: 1rem;
+            color: $border-hover;
+        }
+    }
+}
+.sidebar {
+    font-size: 0.8em;
+    p {
+        margin: 10px 0;
+        font-weight: bold;
+        color: $border-hover;
+    }
+    .bar {
+        background: white;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        padding: 12px;
+        margin-bottom: 30px;
+        li {
+            margin-bottom: 10px;
+            color: $border-hover;
+            font-weight: bold;
+        }
+        li a{
+            font-weight: normal;
+            text-decoration: none;
+            color: $etsy-blue;
+        }
+        li a:hover{
+            text-decoration: underline;
+        }
+        ul ul {
+            margin: 10px 0 0 20px;
+        }
+        .section {
+            padding: 5px 0;
+            border-bottom: 1px solid $border-color;
+        }
+        .section:first-of-type {
+            padding-top: 0;
+        }
+        .section:last-of-type {
+            border: none;
+        }
+    }
+    .price {
+        overflow: auto;
+        p {
+            float: left;
+            vertical-align: middle;
+            padding: 0 10px;
+        }
+        .input-box {
+            float: left;
+            width: 30%;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            padding: 5px;
+            span {
+                width: 10%;
+            }
+            input {
+                border: none;
+                width: 70%;
+            }
+        }
+        .submit {
+            float: right;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            padding: 5px 5px 5px 5px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+    }
+    .colors {
+        overflow: auto;
+        margin: 10px 0;
+        li {
+            float: left;
+            width: 10%;
+            height: 20px;
+            background: $border-hover;
+            border-radius: 3px;
+            margin: 0 2px;
 
+        }
+        .red {
+            background: red;
+        }
+        .orange {
+            background: orange;
+        }
+        .yellow {
+            background: yellow;
+        }
+        .green {
+            background: green;
+        }
+        .blue {
+            background: blue;
+        }
+        .purple {
+            background: purple;
+        }
+        .black {
+            background: black;
+        }
+        .white {
+            background: white;
+            border: 1px solid $border-color;
+        }
+    }
+    #ship-to {
+        width: 100%;
+        margin: 0 0 10px 0;
+        select {
+            padding: 5px;
+        }
+    }
+}
+.listings {
+    font-family: $body-fonts;
+    .list-cat, .list-sort {
+        font-size: 0.8em;
+        color: $border-hover;
+        margin: 10px 0;
+        a {
+            color: $etsy-blue;
+            text-decoration: none;
+        }
+    }
+}
+.list-cat {
+    float: left;
+    span {
+        font-weight: bold;
+    }
+}
+.list-sort {
+    float: right;
+    a:after {
+            float: right;
+            position: relative;
+            top: 4px;
+            right: -2px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 4px 0 4px;
+            border-color: $border-color transparent transparent transparent;
+    }
+}
+article {
+    margin-bottom: 25px;
+    @include span-columns(4);
+    @include omega(3n);
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    font-size: 0.8em;
+    background: white;
 
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+    }
+    .top {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .top:before {
+        content: "";
+        display: block;
+        padding-top: 65%;
+    }
+    .wishlist, .favorite {
+        display: none;
+    }
+    &:hover .wishlist, &:hover .favorite {
+        display: block;
+    }
+    .wishlist {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $border-color;
+        background: white;
+        margin: 2px;
+        padding: 3px;
+        border-radius: 2px;
+        border: 1px solid $border-color;
+        .fa:after {
+            position: relative;
+            top: 12px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 4px 0 4px;
+            border-color: $border-color transparent transparent transparent;
+        }
+    }
+    .wishlist:hover {
+        color: $border-hover;
+        border-color: $border-hover;
+        .fa:after {
+            border-color: $border-hover transparent transparent transparent;
+        }
+    }
+    .favorite{
+        position: absolute;
+        top: 0;
+        right: 29px;
+        color: $border-color;
+        background: white;
+        margin: 2px;
+        padding: 3px;
+        border-radius: 2px;
+        border: 1px solid $border-color;
+    }
+    .favorite:hover {
+        color: $border-hover;
+        border-color: $border-hover;
+        .fa:after {
+            border-color: $border-hover transparent transparent transparent;
+        }
+    }
 
+    .description {
+        padding: 5px;
+        h2 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:last-of-type {
+        color: $border-color;
+    }
+    a:last-of-type:hover {
+        text-decoration: underline;
+    }
+    .price {
+        color: green;
+        float: right;
+    }
+}
+.pagination {
+    @include span-columns(4);
+    @include shift(3);
+    clear: both;
+    font-family: $body-fonts;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    p {
+        margin: 10px 0;
+    }
+    span {
+        font-weight: bold;
+    }
+    a {
+        text-decoration: none;
+        color: $etsy-blue;
+        margin: 10px 0;
+    }
 
+    ul {
+        overflow: auto;
+        margin: 10px 0;
+    }
+    li {
+        float: left;
+        padding: 10px;
+        border: 1px solid $border-color;
+        background: white;
+        font-weight: bold;
+    }
+    li:hover {
+        background: none;
+    }
+    li:nth-of-type(2n) {
+        border-left: none;
+        border-right: none;
+    }
+    li:first-of-type {
+        background: none;
+        color: $border-hover;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    li:last-of-type {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+}
+footer {
+    border-top: 1px solid $border-color;
 
+    a {
+        text-decoration: none;
+        color: $etsy-blue;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .subscribe {
+        margin: 50px 0;
+        padding: 25px;
+        width: 100%;
+        border: 8px solid darken($background-color, 4%);
+        border-radius: 3px;
+        text-align: center;
+        p {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px;
+        }
+        form {
+            margin: 10px;
+        }
+        input, button {
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        input {
+            border: 1px solid $border-color;
+        }
+        button {
+            background: $etsy-blue;
+            color: white;
+            font-weight: bold;
+            border: 1px solid darken($etsy-blue, 5%);
+        }
+        button:hover {
+            background: lighten($etsy-blue, 2%)
+        }
+        button:focus {
+            outline: none;
+        }
+    }
+    .footer-links {
+        overflow: auto;
+        margin: 50px 0;
+        font-family: $body-fonts;
+        font-size: 0.8em;
+        button {
+            padding: 5px;
+            background: $etsy-blue;
+            border-radius: 3px;
+            color: white;
+            border: 1px solid darken($etsy-blue, 5%);
+        }
+        ul {
+            width: 20%;
+            float: left;
+        }
+        li {
+            margin: 10px 0;
+        }
+    }
+    .bottom {
+        clear: both;
+        overflow: auto;
+        padding: 20px 0;
+        border-top: 1px solid $border-color;
+        color: $border-hover;
+        font-size: 0.8em;
+        .center {
+            @include span-columns(6);
+            @include shift(3);
+        }
+        ul:first-of-type {
+            float: left;
+            width: 55%;
+            overflow: auto;
+            margin: 20px 0;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            text-align: center;
+            li {
+                float: left;
+                padding: 10px;
+            }
+            li:nth-of-type(2) {
+                border-right: 1px solid $border-color;
+                border-left: 1px solid $border-color;
+            }
+            li:hover {
+                color: $etsy-blue;
+                background: $etsy-blue-hover;
+            }
+        }
+        button {
+            float: right;
+            margin: 20px 0;
+            width: 150px;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid $border-color;
+            background: none;
+            color: $border-hover;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        button:hover {
+            background: lighten($border-color, 15%)
+        }
+        ul:last-of-type {
+            clear: both;
+            margin: 20px 0;
+            margin-bottom: 50px;
+            li {
+                float: left;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+.fa-refresh {
+    text-align: center;
+    font-size: 2em;
+    color: $border-color;
+    margin: 15% 50%;
+}
