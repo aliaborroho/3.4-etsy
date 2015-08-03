@@ -1,6 +1,6 @@
 var loadEtsy = function (query, onload, immediate) {
     var oReq = new XMLHttpRequest();
-    var apiKey = 'ki0carhy6hn0ldkouxbju1wq';
+    var apiKey = 'QNSRX-CQ5ZY-DYD42-85SLW-KYDW3&d';
     var url = 'https://api.etsy.com/v2/listings/active.js?api_key=' +
         apiKey +
         '&keywords=' +
@@ -15,6 +15,14 @@ var loadEtsy = function (query, onload, immediate) {
     });
 
     if (immediate) {
-        immediate();
+    immediate();
+    }
+
+    function htmlDecode(input){
+      var e = document.createElement('div');
+      e.innerHTML = input;
+      return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
     }
 };
+
+
